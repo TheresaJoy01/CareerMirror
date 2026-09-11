@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CareerMirror - Authentication</title>
+
+  <!-- Google Fonts: Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <link rel="stylesheet" href="login.css" />
+</head>
+<body>
+
+  <!-- Background Decorative Shapes -->
+  <div class="bg-shape bg-top-left"></div>
+  <div class="bg-shape bg-top-right"></div>
+  <div class="bg-shape bg-bottom-right"></div>
+  <div class="bg-shape bg-bottom-left"></div>
+
+  <!-- Main Container -->
+  <div class="page-wrapper">
+    
+    <!-- Top Header -->
+    <header class="header">
+      <div class="logo">
+        <div class="logo-icon">C</div>
+        <span class="logo-text">CareerMirror</span>
+      </div>
+      <p class="tagline">
+        Build Your Skills &nbsp;•&nbsp; Track Your Progress &nbsp;•&nbsp; Shape Your Future
+      </p>
+    </header>
+
+    <!-- Authentication Card Container -->
+    <div class="auth-card">
+      
+      <!-- Left Column: Login -->
+      <div class="auth-section login-section">
+        
+        <!-- Illustration Area -->
+        <div class="illustration-wrapper">
+          <div class="illustration-bg"></div>
+          <img src="https://cdni.iconscout.com/illustration/premium/thumb/woman-working-on-laptop-4487229-3722709.png" alt="Working Illustration" class="hero-img">
+          
+          <div class="floating-badge badge-ai"><i class="fa-solid fa-microchip"></i> AI</div>
+          <div class="floating-badge badge-chart"><i class="fa-solid fa-chart-column"></i></div>
+          <div class="floating-badge badge-gear"><i class="fa-solid fa-gear"></i></div>
+        </div>
+
+        <h2 class="section-title">Welcome Back!</h2>
+        <p class="section-subtitle">
+          Log in to your CareerMirror account<br>and continue your journey.
+        </p>
+
+        <form id="loginForm" class="auth-form">
+          <div class="input-group">
+            <i class="fa-regular fa-envelope input-icon"></i>
+            <input type="email" placeholder="Email Address" required />
+          </div>
+
+          <div class="input-group">
+            <i class="fa-solid fa-lock input-icon"></i>
+            <input type="password" id="loginPassword" placeholder="Password" required />
+            <i class="fa-regular fa-eye-slash toggle-password" data-target="loginPassword"></i>
+          </div>
+
+          <div class="form-options">
+            <label class="checkbox-container">
+              <input type="checkbox" checked />
+              <span class="checkmark"></span>
+              <span class="label-text">Remember me</span>
+            </label>
+            <a href="#" class="forgot-link">Forgot password?</a>
+          </div>
+
+          <button type="submit" class="btn-submit">
+            <i class="fa-solid fa-right-to-bracket"></i> Login
+          </button>
+        </form>
+
+        <div class="divider">
+          <span>OR</span>
+        </div>
+
+        <div class="social-buttons">
+          <button type="button" class="btn-social">
+            <svg class="social-icon" viewBox="0 0 24 24">
+              <path fill="#EA4335" d="M12 5c1.6 0 3 .6 4.1 1.6l3.1-3.1C17.3 1.8 14.8 1 12 1 7.5 1 3.7 3.6 1.9 7.3l3.7 2.9C6.5 7.2 9 5 12 5z"/>
+              <path fill="#4285F4" d="M23.5 12.3c0-.8-.1-1.6-.2-2.3H12v4.5h6.5c-.3 1.5-1.1 2.8-2.4 3.7l3.7 2.9c2.2-2 3.7-5 3.7-8.8z"/>
+              <path fill="#FBBC05" d="M5.6 14.8c-.2-.7-.4-1.5-.4-2.3s.2-1.6.4-2.3L1.9 7.3C.7 9.7 0 10.8 0 12s.7 2.3 1.9 4.7l3.7-2.9z"/>
+              <path fill="#34A853" d="M12 23c3.2 0 6-1.1 8-3l-3.7-2.9c-1.1.7-2.5 1.2-4.3 1.2-3 0-5.5-2.2-6.4-5.2L1.9 16C3.7 19.7 7.5 23 12 23z"/>
+            </svg>
+            Continue with Google
+          </button>
+
+          <button type="button" class="btn-social">
+            <svg class="social-icon" viewBox="0 0 23 23">
+              <path fill="#f35325" d="M1 1h10v10H1z"/>
+              <path fill="#81bc06" d="M12 1h10v10H12z"/>
+              <path fill="#05a6f0" d="M1 12h10v10H1z"/>
+              <path fill="#ffba08" d="M12 12h10v10H12z"/>
+            </svg>
+            Continue with Microsoft
+          </button>
+        </div>
+
+      </div>
+
+      <div class="section-divider"></div>
+
+      <!-- Right Column: Create Account -->
+      <div class="auth-section register-section">
+        
+        <div class="avatar-badge-wrapper">
+          <div class="avatar-circle">
+            <i class="fa-solid fa-user"></i>
+            <div class="plus-icon"><i class="fa-solid fa-plus"></i></div>
+          </div>
+          <span class="sparkle spark-1">•</span>
+          <span class="sparkle spark-2">•</span>
+          <span class="sparkle spark-3">•</span>
+        </div>
+
+        <h2 class="section-title">Create Your Account</h2>
+        <p class="section-subtitle">
+          Join CareerMirror and unlock<br>new opportunities.
+        </p>
+
+        <form id="registerForm" class="auth-form">
+          <div class="input-group">
+            <i class="fa-regular fa-user input-icon"></i>
+            <input type="text" placeholder="Full Name" required />
+          </div>
+
+          <div class="input-group">
+            <i class="fa-regular fa-envelope input-icon"></i>
+            <input type="email" placeholder="Email Address" required />
+          </div>
+
+          <div class="input-group">
+            <i class="fa-solid fa-lock input-icon"></i>
+            <input type="password" id="regPassword" placeholder="Password" required />
+            <i class="fa-regular fa-eye-slash toggle-password" data-target="regPassword"></i>
+          </div>
+
+          <div class="input-group">
+            <i class="fa-solid fa-lock input-icon"></i>
+            <input type="password" id="confirmPassword" placeholder="Confirm Password" required />
+            <i class="fa-regular fa-eye-slash toggle-password" data-target="confirmPassword"></i>
+          </div>
+
+          <button type="submit" class="btn-submit">
+            <i class="fa-solid fa-user-plus"></i> Create Account
+          </button>
+        </form>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <script src="login.js"></script>
+</body>
+</html>

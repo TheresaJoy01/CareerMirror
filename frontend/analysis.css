@@ -1,0 +1,1058 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: "Inter", sans-serif;
+
+    background: #f9fcff;
+
+    color: #14245c;
+
+    min-height: 100vh;
+
+    overflow-x: hidden;
+}
+
+
+/* =========================
+   BACKGROUND
+========================= */
+
+body::before {
+    content: "";
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: -5;
+
+    background:
+        radial-gradient(
+            circle at 50% 50%,
+            rgba(236, 244, 255, 0.75),
+            rgba(249, 252, 255, 0.25) 55%,
+            #ffffff 100%
+        );
+}
+
+
+.bg-shape {
+    position: fixed;
+
+    border-radius: 50%;
+
+    pointer-events: none;
+
+    z-index: -2;
+}
+
+
+.bg-top-left {
+    width: 220px;
+    height: 220px;
+
+    top: -115px;
+    left: -115px;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(183, 163, 255, 0.22),
+            rgba(130, 207, 255, 0.13),
+            transparent 70%
+        );
+}
+
+
+.bg-bottom-left {
+    width: 270px;
+    height: 270px;
+
+    left: -145px;
+    bottom: -155px;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(183, 168, 255, 0.20),
+            transparent 70%
+        );
+}
+
+
+.bg-bottom-right {
+    width: 280px;
+    height: 280px;
+
+    right: -155px;
+    bottom: -150px;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(174, 218, 255, 0.20),
+            transparent 70%
+        );
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+    height: 98px;
+
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 0 11%;
+
+    border-bottom: 1px solid #e2e9f5;
+
+    background: rgba(255, 255, 255, 0.55);
+}
+
+
+/* Logo */
+
+.logo {
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+}
+
+
+.logo-icon {
+    width: 45px;
+    height: 47px;
+
+    border-radius: 15px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #7a42ed,
+            #4268e9
+        );
+}
+
+
+.logo-icon span {
+    color: white;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 37px;
+
+    font-weight: 800;
+}
+
+
+.logo-text {
+    color: #14265d;
+
+    font-size: 27px;
+
+    font-weight: 700;
+
+    letter-spacing: -0.8px;
+}
+
+
+/* Career badge */
+
+.career-badge {
+    height: 54px;
+
+    padding: 0 22px;
+
+    border-radius: 30px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    background:
+        linear-gradient(
+            110deg,
+            #f2f3ff,
+            #f0efff
+        );
+
+    border: 1px solid #d9ddf1;
+
+    color: #4744c8;
+
+    font-size: 17px;
+
+    font-weight: 600;
+}
+
+
+.career-badge svg {
+    width: 28px;
+    height: 28px;
+
+    fill: none;
+
+    stroke: #5b5ce6;
+
+    stroke-width: 1.8;
+
+    stroke-linecap: round;
+
+    stroke-linejoin: round;
+}
+
+
+/* =========================
+   MAIN
+========================= */
+
+main {
+    width: 100%;
+
+    max-width: 954px;
+
+    margin: 0 auto;
+
+    padding-bottom: 70px;
+}
+
+
+/* =========================
+   INTRO
+========================= */
+
+.intro {
+    position: relative;
+
+    min-height: 205px;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    padding-top: 57px;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+
+/* =========================
+   INTRO TEXT
+========================= */
+
+.intro-text {
+    padding-top: 7px;
+    padding-left: 0;
+
+    position: relative;
+    z-index: 2;
+}
+
+
+.intro h1 {
+    font-size: 42px;
+    font-weight: 700;
+
+    color: #13245d;
+
+    letter-spacing: -1.5px;
+}
+
+
+.wave {
+    font-size: 36px;
+}
+
+
+.intro p {
+    margin-top: 10px;
+
+    color: #56679d;
+
+    font-size: 23px;
+    font-weight: 400;
+}
+
+
+/* =========================
+   CAREER GIRL IMAGE
+========================= */
+
+.illustration {
+    position: absolute;
+
+    top: 60px;
+    right: -8px;
+
+    width: 415px;
+    height: 275px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    z-index: 1;
+
+    padding: 0;
+}
+
+
+.illustration img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+
+    object-position: center center;
+}
+
+
+/* =========================
+   READINESS CARD
+========================= */
+
+.readiness-card {
+    width: 454px;
+
+    height: 197px;
+
+    border-radius: 17px;
+
+    background: rgba(255, 255, 255, 0.9);
+
+    border: 1px solid #d8e2f2;
+
+    box-shadow:
+        0 4px 18px rgba(73, 104, 170, 0.06);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+/* Progress ring */
+
+.progress-ring {
+    position: relative;
+
+    width: 180px;
+
+    height: 180px;
+}
+
+
+.progress-ring svg {
+    width: 180px;
+
+    height: 180px;
+
+    transform: rotate(-90deg);
+}
+
+
+.progress-ring circle {
+    fill: none;
+
+    stroke-width: 15;
+}
+
+
+.ring-background {
+    stroke: #dce7f7;
+}
+
+
+.ring-progress {
+    stroke: #5845e7;
+
+    stroke-linecap: round;
+
+    stroke-dasharray: 452;
+
+    stroke-dashoffset: 163;
+}
+
+
+.percentage {
+    position: absolute;
+
+    inset: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+.percentage strong {
+    color: #10245e;
+
+    font-size: 43px;
+
+    font-weight: 700;
+
+    line-height: 1;
+}
+
+
+.percentage span {
+    margin-top: 8px;
+
+    color: #536492;
+
+    font-size: 16px;
+
+    font-weight: 500;
+}
+
+
+/* =========================
+   ANALYSIS GRID
+========================= */
+
+.analysis-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 22px;
+
+    margin-top: 28px;
+}
+
+
+.analysis-card {
+    height: 300px;
+
+    border-radius: 17px;
+
+    background: rgba(255, 255, 255, 0.92);
+
+    border: 1px solid #d8e2f2;
+
+    padding: 20px 31px;
+
+    box-shadow:
+        0 4px 18px rgba(73, 104, 170, 0.05);
+}
+
+
+/* =========================
+   CARD TITLES
+========================= */
+
+.card-title {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    font-size: 19px;
+
+    font-weight: 700;
+}
+
+
+.strengths-title {
+    color: #159c94;
+}
+
+
+.gaps-title {
+    color: #e87516;
+}
+
+
+.title-icon {
+    width: 34px;
+
+    height: 34px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: white;
+
+    font-size: 22px;
+
+    font-weight: 700;
+}
+
+
+.check-icon {
+    background: #19ad9f;
+}
+
+
+.warning-icon {
+    background: #ed821c;
+
+    border-radius: 50%;
+}
+
+
+/* =========================
+   SKILL ROWS
+========================= */
+
+.skill-row {
+    position: relative;
+
+    margin-top: 25px;
+
+    height: 45px;
+}
+
+
+.skill-name {
+    color: #12235c;
+
+    font-size: 19px;
+
+    font-weight: 600;
+}
+
+
+.skill-bar {
+    position: absolute;
+
+    left: 0;
+
+    right: 78px;
+
+    bottom: 0;
+
+    height: 12px;
+
+    border-radius: 10px;
+
+    background: #edf1fa;
+
+    overflow: hidden;
+}
+
+
+.skill-fill {
+    height: 100%;
+
+    border-radius: 10px;
+}
+
+
+.purple-fill {
+    background: #6548e9;
+}
+
+
+.blue-fill {
+    background: #478be2;
+}
+
+
+.pink-fill {
+    background: #ee6381;
+}
+
+
+.score {
+    position: absolute;
+
+    right: 0;
+
+    top: 0;
+
+    min-width: 61px;
+
+    height: 35px;
+
+    border-radius: 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 16px;
+
+    font-weight: 600;
+}
+
+
+.strength-score {
+    background: #ddf8f4;
+
+    color: #149c91;
+}
+
+
+.gap-score {
+    background: #ffedf3;
+
+    color: #df4370;
+}
+
+
+/* =========================
+   TOP PRIORITY
+========================= */
+
+.priority-card {
+    width: 100%;
+
+    height: 226px;
+
+    margin-top: 28px;
+
+    padding: 21px 30px;
+
+    border-radius: 17px;
+
+    background:
+        linear-gradient(
+            110deg,
+            rgba(250, 249, 255, 0.95),
+            rgba(247, 248, 255, 0.95)
+        );
+
+    border: 1px solid #d9e0f1;
+}
+
+
+.priority-title {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    color: #6943dc;
+
+    font-size: 19px;
+
+    font-weight: 700;
+}
+
+
+.fire-icon {
+    font-size: 29px;
+}
+
+
+.priority-content {
+    height: 150px;
+
+    display: flex;
+
+    align-items: center;
+}
+
+
+/* Target icon */
+
+.target-icon {
+    position: relative;
+
+    width: 105px;
+
+    height: 105px;
+
+    border-radius: 50%;
+
+    background: #e8e9ff;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+.target-circle {
+    width: 55px;
+
+    height: 55px;
+
+    border: 6px solid #6654e8;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+.target-circle::before {
+    content: "";
+
+    width: 27px;
+
+    height: 27px;
+
+    border: 5px solid #6654e8;
+
+    border-radius: 50%;
+}
+
+
+.target-dot {
+    position: absolute;
+
+    width: 8px;
+
+    height: 8px;
+
+    border-radius: 50%;
+
+    background: #6654e8;
+}
+
+
+.target-arrow {
+    position: absolute;
+
+    right: 17px;
+
+    top: 17px;
+
+    color: #6251e5;
+
+    font-size: 31px;
+
+    font-weight: 700;
+}
+
+
+/* Priority information */
+
+.priority-info {
+    margin-left: 22px;
+}
+
+
+.priority-info h2 {
+    color: #14245d;
+
+    font-size: 28px;
+
+    font-weight: 700;
+}
+
+
+.priority-details {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-top: 12px;
+
+    color: #64719a;
+
+    font-size: 17px;
+}
+
+
+.gap-pill,
+.high-pill {
+    height: 35px;
+
+    padding: 0 13px;
+
+    border-radius: 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-weight: 600;
+}
+
+
+.gap-pill {
+    background: #ffeaf1;
+
+    color: #dd4673;
+}
+
+
+.high-pill {
+    background: #ffeaf0;
+
+    color: #d93668;
+}
+
+
+.separator {
+    color: #a1aac4;
+
+    margin: 0 6px;
+}
+
+
+.priority-arrow {
+    margin-left: auto;
+
+    color: #5943e3;
+
+    font-size: 48px;
+
+    font-weight: 300;
+}
+
+
+/* =========================
+   ROADMAP BUTTON
+========================= */
+
+.roadmap-container {
+    display: flex;
+
+    justify-content: center;
+
+    margin-top: 38px;
+}
+
+
+.roadmap-btn {
+    width: 365px;
+
+    height: 72px;
+
+    border: none;
+
+    border-radius: 38px;
+
+    background:
+        linear-gradient(
+            100deg,
+            #633be8,
+            #3977ed
+        );
+
+    color: white;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 18px;
+
+    font-weight: 600;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 9px 20px rgba(75, 69, 219, 0.15);
+}
+
+
+.sparkles {
+    font-size: 29px;
+}
+
+
+.roadmap-arrow {
+    font-size: 25px;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1000px) {
+
+    main {
+        width: 90%;
+    }
+
+    .header {
+        padding: 0 5%;
+    }
+
+    .illustration {
+        transform: scale(0.85);
+
+        transform-origin: right center;
+    }
+}
+
+
+@media (max-width: 750px) {
+
+    .header {
+        height: 80px;
+    }
+
+    .logo-text {
+        font-size: 21px;
+    }
+
+    .career-badge {
+        padding: 0 13px;
+
+        font-size: 14px;
+    }
+
+    .intro {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        height: auto;
+
+        padding-top: 30px;
+    }
+
+    .illustration {
+        align-self: center;
+
+        transform: none;
+    }
+
+    .readiness-card {
+        width: 100%;
+    }
+
+    .analysis-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .priority-card {
+        height: auto;
+
+        min-height: 226px;
+    }
+}
+
+
+@media (max-width: 500px) {
+
+    .header {
+        padding: 0 20px;
+    }
+
+    .logo-icon {
+        width: 38px;
+
+        height: 40px;
+    }
+
+    .logo-text {
+        font-size: 18px;
+    }
+
+    .career-badge {
+        height: 43px;
+
+        padding: 0 10px;
+    }
+
+    .career-badge svg {
+        width: 22px;
+
+        height: 22px;
+    }
+
+    .career-badge span {
+        font-size: 12px;
+    }
+
+    .intro h1 {
+        font-size: 30px;
+    }
+
+    .intro p {
+        font-size: 17px;
+    }
+
+    .illustration {
+        width: 100%;
+
+        height: 190px;
+    }
+
+    .analysis-card {
+        padding: 20px;
+    }
+
+    .skill-name {
+        font-size: 16px;
+    }
+
+    .priority-content {
+        flex-wrap: wrap;
+    }
+
+    .priority-info h2 {
+        font-size: 21px;
+    }
+
+    .priority-details {
+        font-size: 14px;
+    }
+
+    .target-icon {
+        width: 75px;
+
+        height: 75px;
+    }
+
+    .roadmap-btn {
+        width: 100%;
+    }
+}

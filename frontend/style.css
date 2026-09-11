@@ -1,0 +1,678 @@
+/* =========================================
+   RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f8faff;
+    color: #10275d;
+    overflow-x: hidden;
+}
+
+button {
+    font-family: inherit;
+}
+
+
+/* =========================================
+   PAGE
+========================================= */
+
+.page {
+    width: 100%;
+    min-height: 100vh;
+
+    position: relative;
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 80% 27%,
+            rgba(211, 232, 255, 0.45),
+            transparent 25%
+        ),
+        #f9fbff;
+}
+
+
+/* =========================================
+   LOGO
+========================================= */
+
+.logo {
+    height: 150px;
+
+    display: flex;
+    align-items: center;
+
+    padding-left: 7.4%;
+
+    position: relative;
+    z-index: 10;
+}
+
+.logo-mark {
+    width: 86px;
+    height: 86px;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+
+    font-size: 67px;
+    font-weight: 800;
+
+    background: linear-gradient(
+        135deg,
+        #6734e9,
+        #3e7df2
+    );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.logo-mark span {
+    position: absolute;
+
+    top: 19px;
+    left: 34px;
+
+    font-size: 20px;
+
+    color: #ffffff;
+
+    -webkit-text-fill-color: white;
+}
+
+.logo-name {
+    margin-left: 5px;
+
+    font-size: 57px;
+    font-weight: 700;
+
+    letter-spacing: -3px;
+
+    color: #102b67;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero {
+    width: 86%;
+    max-width: 1360px;
+
+    margin: 0 auto;
+
+    min-height: 515px;
+
+    display: grid;
+
+    grid-template-columns: 52% 48%;
+
+    align-items: center;
+}
+
+
+/* =========================================
+   HERO LEFT
+========================================= */
+
+.hero-left {
+    padding-left: 20px;
+
+    margin-top: -5px;
+}
+
+.hero-left h1 {
+    font-size: clamp(43px, 4.3vw, 66px);
+
+    line-height: 1.12;
+
+    letter-spacing: -2.8px;
+
+    font-weight: 700;
+
+    color: #102a63;
+}
+
+.hero-left h1 span {
+    background: linear-gradient(
+        90deg,
+        #7132ef,
+        #2185ee
+    );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    color: transparent;
+}
+
+.hero-left p {
+    margin-top: 27px;
+
+    color: #5f6d8d;
+
+    font-size: 17px;
+
+    line-height: 1.55;
+
+    font-weight: 400;
+}
+
+
+/* =========================================
+   START YOUR JOURNEY BUTTON
+========================================= */
+
+.journey-button {
+    margin-top: 27px;
+
+    width: 476px;
+    height: 93px;
+
+    border: none;
+
+    border-radius: 48px;
+
+    background: linear-gradient(
+        100deg,
+        #6730ed,
+        #477af2
+    );
+
+    color: white;
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 0 31px;
+
+    gap: 20px;
+
+    font-size: 26px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 13px 28px rgba(
+            86,
+            57,
+            213,
+            0.23
+        );
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.journey-button:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 17px 32px rgba(
+            86,
+            57,
+            213,
+            0.30
+        );
+}
+
+.journey-button:active {
+    transform: translateY(0);
+}
+
+.sparkles {
+    font-size: 35px;
+
+    line-height: 1;
+}
+
+.arrow {
+    margin-left: auto;
+
+    font-size: 36px;
+
+    font-weight: 300;
+}
+
+
+/* =========================================
+   HERO RIGHT
+   YOUR UPLOADED IMAGE
+========================================= */
+
+.hero-right {
+    width: 100%;
+    height: 520px;
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    z-index: 4;
+}
+
+.hero-right img {
+    width: 100%;
+
+    max-width: 570px;
+
+    height: auto;
+
+    display: block;
+
+    object-fit: contain;
+}
+
+
+/* =========================================
+   HOW IT WORKS
+========================================= */
+
+.how-it-works {
+    width: 83.5%;
+    max-width: 1280px;
+
+    height: 305px;
+
+    margin: 0 auto 55px;
+
+    padding-top: 32px;
+
+    background: rgba(
+        255,
+        255,
+        255,
+        0.82
+    );
+
+    border-radius: 30px;
+
+    position: relative;
+
+    z-index: 20;
+}
+
+
+/* =========================================
+   SECTION HEADING
+========================================= */
+
+.section-heading {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 22px;
+
+    margin-bottom: 42px;
+}
+
+.section-heading h2 {
+    font-size: 19px;
+
+    letter-spacing: 3px;
+
+    color: #697591;
+
+    font-weight: 700;
+}
+
+.line {
+    width: 65px;
+    height: 2px;
+
+    background: #b9c0d1;
+}
+
+
+/* =========================================
+   STEPS
+========================================= */
+
+.steps {
+    width: 85%;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 70px
+        1fr 70px
+        1fr;
+
+    align-items: start;
+}
+
+.step {
+    text-align: center;
+}
+
+
+/* =========================================
+   STEP NUMBERS
+========================================= */
+
+.step-number {
+    width: 52px;
+    height: 52px;
+
+    margin: 0 auto;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+
+    font-size: 15px;
+
+    font-weight: 700;
+}
+
+.purple-number {
+    background: linear-gradient(
+        135deg,
+        #7034ee,
+        #583fe7
+    );
+}
+
+.blue-number {
+    background: #287fe8;
+}
+
+.green-number {
+    background: #22b89f;
+}
+
+
+/* =========================================
+   STEP ICONS
+========================================= */
+
+.step-icon {
+    width: 73px;
+    height: 73px;
+
+    margin: -4px auto 11px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 34px;
+
+    border: 9px solid transparent;
+}
+
+.purple-icon {
+    color: #703ce5;
+
+    background: #f0ecff;
+}
+
+.blue-icon {
+    color: #2780e6;
+
+    background: #e7f3ff;
+}
+
+.green-icon {
+    color: #21b69f;
+
+    background: #e5faf5;
+}
+
+
+/* =========================================
+   STEP TEXT
+========================================= */
+
+.step h3 {
+    color: #102b67;
+
+    font-size: 18px;
+
+    line-height: 1.28;
+
+    font-weight: 700;
+}
+
+
+/* =========================================
+   STEP ARROWS
+========================================= */
+
+.step-arrow {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    height: 140px;
+
+    color: #a6afc4;
+
+    font-size: 28px;
+
+    font-weight: 300;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1100px) {
+
+    .logo {
+        height: 115px;
+    }
+
+    .logo-mark {
+        width: 65px;
+        height: 65px;
+
+        font-size: 50px;
+    }
+
+    .logo-name {
+        font-size: 44px;
+    }
+
+    .hero {
+        width: 91%;
+    }
+
+    .hero-left h1 {
+        font-size: 47px;
+    }
+
+    .journey-button {
+        width: 410px;
+        height: 76px;
+
+        font-size: 21px;
+    }
+
+    .hero-right {
+        height: 480px;
+    }
+
+    .hero-right img {
+        max-width: 530px;
+    }
+
+    .how-it-works {
+        width: 91%;
+    }
+}
+
+
+/* =========================================
+   MOBILE / SMALL TABLET
+========================================= */
+
+@media (max-width: 800px) {
+
+    .logo {
+        justify-content: center;
+
+        padding-left: 0;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+
+        text-align: center;
+
+        padding-top: 20px;
+    }
+
+    .hero-left {
+        padding-left: 0;
+    }
+
+    .hero-left h1 {
+        font-size: 43px;
+    }
+
+    .hero-left p {
+        font-size: 15px;
+    }
+
+    .journey-button {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-right {
+        height: auto;
+
+        margin-top: 10px;
+    }
+
+    .hero-right img {
+        width: 100%;
+
+        max-width: 520px;
+    }
+
+    .how-it-works {
+        height: auto;
+
+        padding-bottom: 45px;
+    }
+
+    .steps {
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+    }
+
+    .step-arrow {
+        display: none;
+    }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 520px) {
+
+    .logo-name {
+        font-size: 34px;
+
+        letter-spacing: -2px;
+    }
+
+    .logo-mark {
+        width: 53px;
+        height: 53px;
+
+        font-size: 40px;
+    }
+
+    .logo-mark span {
+        top: 10px;
+        left: 21px;
+
+        font-size: 13px;
+    }
+
+    .hero-left h1 {
+        font-size: 35px;
+
+        letter-spacing: -1.8px;
+    }
+
+    .hero-left p {
+        font-size: 14px;
+    }
+
+    .journey-button {
+        width: 90%;
+        height: 68px;
+
+        font-size: 17px;
+    }
+
+    .hero-right {
+        width: 100%;
+
+        height: auto;
+    }
+
+    .hero-right img {
+        width: 110%;
+
+        max-width: none;
+
+        margin-left: -5%;
+    }
+
+    .how-it-works {
+        width: 92%;
+    }
+
+    .section-heading h2 {
+        font-size: 14px;
+    }
+}

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CareerMirror - Target Career</title>
+  
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  
+  <!-- Google Font: Inter / Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="career.css" />
+</head>
+<body>
+
+  <!-- Background Decorative Shapes -->
+  <div class="bg-shape bg-top-left"></div>
+  <div class="bg-shape bg-bottom-right"></div>
+  <div class="bg-shape bg-bottom-left"></div>
+
+  <!-- Header / Navigation -->
+  <header class="navbar">
+    <div class="logo">
+      <div class="logo-icon">C</div>
+      <span class="logo-text">CareerMirror</span>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="main-container">
+    
+    <!-- Title Section -->
+    <div class="title-section">
+      <div class="target-icon-wrapper">
+        <i class="fa-solid fa-bullseye target-icon"></i>
+        <span class="sparkle spark-1">⚡</span>
+        <span class="sparkle spark-2">✦</span>
+      </div>
+      <h1 class="main-title">
+        What’s your <br>
+        <span class="highlight">target career?</span>
+      </h1>
+      <p class="subtitle">Choose the role you want to prepare for.</p>
+    </div>
+
+    <!-- Career Options Grid -->
+    <div class="cards-grid">
+      
+      <!-- Option 1: Software Developer (Selected by default) -->
+      <div class="card selected" data-role="Software Developer">
+        <div class="card-icon-box icon-purple">
+          <i class="fa-solid fa-laptop-code"></i>
+        </div>
+        <span class="card-title">Software<br>Developer</span>
+        <button class="arrow-btn" aria-label="Select Software Developer">
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </div>
+
+      <!-- Option 2: Data Analyst -->
+      <div class="card" data-role="Data Analyst">
+        <div class="card-icon-box icon-teal">
+          <i class="fa-solid fa-chart-simple"></i>
+        </div>
+        <span class="card-title">Data<br>Analyst</span>
+        <button class="arrow-btn" aria-label="Select Data Analyst">
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </div>
+
+      <!-- Option 3: AI / ML Engineer -->
+      <div class="card" data-role="AI / ML Engineer">
+        <div class="card-icon-box icon-pink">
+          <i class="fa-solid fa-robot"></i>
+        </div>
+        <span class="card-title">AI / ML<br>Engineer</span>
+        <button class="arrow-btn" aria-label="Select AI / ML Engineer">
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </div>
+
+      <!-- Option 4: Cybersecurity Analyst -->
+      <div class="card" data-role="Cybersecurity Analyst">
+        <div class="card-icon-box icon-orange">
+          <i class="fa-solid fa-shield-halved"></i>
+        </div>
+        <span class="card-title">Cybersecurity<br>Analyst</span>
+        <button class="arrow-btn" aria-label="Select Cybersecurity Analyst">
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </div>
+
+      <!-- Option 5: Cloud Engineer -->
+      <div class="card" data-role="Cloud Engineer">
+        <div class="card-icon-box icon-blue">
+          <i class="fa-solid fa-cloud"></i>
+        </div>
+        <span class="card-title">Cloud<br>Engineer</span>
+        <button class="arrow-btn" aria-label="Select Cloud Engineer">
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Submit Button -->
+    <div class="action-wrapper">
+      <button class="btn-primary" id="analyzeBtn">
+        <i class="fa-solid fa-wand-magic-sparkles"></i>
+        <span>Analyze My Profile</span>
+        <i class="fa-solid fa-arrow-right"></i>
+      </button>
+    </div>
+
+  </main>
+
+  <script src="career.js"></script>
+</body>
+</html>

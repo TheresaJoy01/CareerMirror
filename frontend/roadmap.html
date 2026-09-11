@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CareerMirror - Your AI-Powered Roadmap</title>
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  
+  <!-- Google Font: Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="roadmap.css" />
+</head>
+<body>
+
+  <!-- Background Decorative Shapes -->
+  <div class="bg-shape bg-top-left"></div>
+  <div class="bg-shape bg-bottom-right"></div>
+  <div class="bg-shape bg-bottom-left"></div>
+
+  <!-- Header / Navigation -->
+  <header class="navbar">
+    <div class="logo">
+      <div class="logo-icon">C</div>
+      <span class="logo-text">CareerMirror</span>
+    </div>
+    
+    <!-- Dynamic Top Role Badge -->
+    <div class="user-role-badge" id="topRoleBadge">
+      <i class="fa-solid fa-robot" id="topRoleIcon"></i>
+      <span id="topRoleText">AI/ML Engineer</span>
+    </div>
+  </header>
+
+  <!-- Main Container -->
+  <main class="main-container">
+
+    <!-- Top Banner Section -->
+    <div class="hero-section">
+      <div class="hero-text">
+        <h1 class="main-title">
+          <span class="rocket-emoji">🚀</span> Your AI-Powered Roadmap
+        </h1>
+        <div class="role-pill" id="heroRoleBadge">AI/ML Engineer</div>
+        <p class="subtitle">Based on your current skills and career goal</p>
+      </div>
+
+      <!-- Illustration Area -->
+      <div class="illustration-wrapper">
+        <div class="illustration-bg"></div>
+        <img src="https://cdni.iconscout.com/illustration/premium/thumb/woman-working-on-laptop-4487229-3722709.png" alt="Working illustration" class="hero-img">
+        
+        <!-- Floating Elements around illustration -->
+        <div class="floating-badge badge-ai"><i class="fa-solid fa-microchip"></i> AI</div>
+        <div class="floating-badge badge-chart"><i class="fa-solid fa-chart-column"></i></div>
+        <div class="floating-badge badge-gear"><i class="fa-solid fa-gear"></i></div>
+      </div>
+    </div>
+
+    <!-- Dynamic Roadmap Steps Flow -->
+    <div class="roadmap-flow" id="roadmapContainer">
+      <!-- Steps generated dynamically via JavaScript -->
+    </div>
+
+    <!-- Final Target Banner -->
+    <div class="target-card">
+      <span class="target-sparkle">⚡</span>
+      <div class="target-badge-pill">
+        <i class="fa-solid fa-bullseye"></i> TARGET
+      </div>
+      <h2 class="target-title" id="targetRoleTitle">AI/ML Engineer</h2>
+      <span class="target-sparkle">⚡</span>
+    </div>
+
+  </main>
+
+  <script src="roadmap.js"></script>
+</body>
+</html>
