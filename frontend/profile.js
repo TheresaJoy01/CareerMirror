@@ -30,7 +30,8 @@ function openModal(type) {
         modalDescription.textContent =
             "Enter the skill you want to add.";
 
-        modalInput.placeholder = "e.g. Python";
+        modalInput.placeholder =
+            "e.g. Python";
     }
 
     else if (type === "project") {
@@ -40,7 +41,8 @@ function openModal(type) {
         modalDescription.textContent =
             "Enter the project you want to add.";
 
-        modalInput.placeholder = "e.g. Java Calculator";
+        modalInput.placeholder =
+            "e.g. Java Calculator";
     }
 
     else if (type === "certification") {
@@ -50,18 +52,20 @@ function openModal(type) {
         modalDescription.textContent =
             "Enter the certification you want to add.";
 
-        modalInput.placeholder = "e.g. Python Certification";
+        modalInput.placeholder =
+            "e.g. Python Certification";
     }
 
-    // Clear previous input
+
     modalInput.value = "";
 
-    // Show modal
     modal.classList.add("active");
 
-    // Automatically focus input
+
     setTimeout(() => {
+
         modalInput.focus();
+
     }, 150);
 }
 
@@ -88,7 +92,7 @@ function saveModalInput() {
 
     const value = modalInput.value.trim();
 
-    // Don't add empty values
+
     if (value === "") {
 
         modalInput.focus();
@@ -97,31 +101,25 @@ function saveModalInput() {
     }
 
 
-    /* Add Skill */
-
     if (currentType === "skill") {
 
         addSkillToPage(value);
+
     }
-
-
-    /* Add Project */
 
     else if (currentType === "project") {
 
         addProjectToPage(value);
+
     }
-
-
-    /* Add Certification */
 
     else if (currentType === "certification") {
 
         addCertificationToPage(value);
+
     }
 
 
-    // Close modal after adding
     closeModal();
 }
 
@@ -145,29 +143,29 @@ function addSkillToPage(skill) {
         skillsBox.querySelector(".add-btn");
 
 
-    // Create skill chip
     const chip =
         document.createElement("div");
 
     chip.className = "skill-chip";
 
 
-    // Add skill name and remove button
     chip.innerHTML = `
         ${skill}
-        <button onclick="removeSkill(this)">×</button>
+        <button
+            type="button"
+            onclick="removeSkill(this)"
+        >
+            ×
+        </button>
     `;
 
 
-    // Put skill before Add Skill button
     skillsBox.insertBefore(
         chip,
         addButton
     );
 }
 
-
-/* Remove Skill */
 
 function removeSkill(button) {
 
@@ -194,29 +192,30 @@ function addProjectToPage(project) {
         projectsBox.querySelector(".project-add");
 
 
-    // Create project item
     const item =
         document.createElement("div");
 
     item.className = "project-item";
 
 
-    // Add project name and remove button
     item.innerHTML = `
         <span>${project}</span>
-        <button onclick="removeProject(this)">×</button>
+
+        <button
+            type="button"
+            onclick="removeProject(this)"
+        >
+            ×
+        </button>
     `;
 
 
-    // Put project before Add Project button
     projectsBox.insertBefore(
         item,
         addButton
     );
 }
 
-
-/* Remove Project */
 
 function removeProject(button) {
 
@@ -243,25 +242,34 @@ function addCertificationToPage(certification) {
         certificationBox.querySelector(".add-btn");
 
 
-    // Create certification item
     const item =
         document.createElement("div");
 
     item.className = "project-item";
 
 
-    // Add certification name and remove button
     item.innerHTML = `
         <span>${certification}</span>
-        <button onclick="this.parentElement.remove()">×</button>
+
+        <button
+            type="button"
+            onclick="removeCertification(this)"
+        >
+            ×
+        </button>
     `;
 
 
-    // Add certification before Add Certification button
     certificationBox.insertBefore(
         item,
         addButton
     );
+}
+
+
+function removeCertification(button) {
+
+    button.parentElement.remove();
 }
 
 
@@ -273,7 +281,6 @@ modalInput.addEventListener(
     "keydown",
     function(event) {
 
-        // Press Enter → Add
         if (event.key === "Enter") {
 
             event.preventDefault();
@@ -282,11 +289,11 @@ modalInput.addEventListener(
         }
 
 
-        // Press Escape → Close
         if (event.key === "Escape") {
 
             closeModal();
         }
+
     }
 );
 
@@ -299,12 +306,11 @@ modal.addEventListener(
     "click",
     function(event) {
 
-        // If user clicks the dark area
-        // outside the modal
         if (event.target === modal) {
 
             closeModal();
         }
+
     }
 );
 
@@ -313,97 +319,104 @@ modal.addEventListener(
    CONTINUE BUTTON
 ========================= */
 
-function continueProfile() {
+async function continueProfile() {
 
-    const name =
-        document.getElementById("name").value.trim();
+    // Get name
+    const name = document.getElementById("name").value.trim();
 
-
-    // Don't continue without a name
-    if (name === "") {
-
-        document.getElementById("name").focus();
-
-        return;
-    }
-
-
-    // Collect skills
-    const skillElements =
-        document.querySelectorAll(".skill-chip");
+    // Get skills
+    const skillElements = document.querySelectorAll("#skillsBox .skill-chip");
 
     const skills = [];
 
-    skillElements.forEach(function(skill) {
+    skillElements.forEach(chip => {
+        const button = chip.querySelector("button");
 
-        const skillName =
-            skill.childNodes[0].textContent.trim();
+        // Get only the skill text, not the × button
+        const skill = chip.textContent.replace("×", "").trim();
 
-        if (skillName !== "") {
-
-            skills.push(skillName);
+        if (skill !== "") {
+            skills.push(skill);
         }
     });
 
-
-    // Collect projects
-    const projectElements =
-        document.querySelectorAll(
-            "#projectsBox .project-item"
-        );
+    // Get projects
+    const projectElements = document.querySelectorAll(
+        "#projectsBox .project-item"
+    );
 
     const projects = [];
 
-    projectElements.forEach(function(project) {
+    projectElements.forEach(item => {
+        const project = item.querySelector("span");
 
-        const projectName =
-            project.querySelector("span");
-
-        if (projectName) {
-
-            projects.push(
-                projectName.textContent.trim()
-            );
+        if (project) {
+            projects.push(project.textContent.trim());
         }
     });
 
-
-    // Collect certifications
-    const certificationElements =
-        document.querySelectorAll(
-            "#certificationBox .project-item"
-        );
+    // Get certifications
+    const certificationElements = document.querySelectorAll(
+        "#certificationBox .project-item"
+    );
 
     const certifications = [];
 
-    certificationElements.forEach(function(certification) {
+    certificationElements.forEach(item => {
+        const certification = item.querySelector("span");
 
-        const certificationName =
-            certification.querySelector("span");
-
-        if (certificationName) {
-
-            certifications.push(
-                certificationName.textContent.trim()
-            );
+        if (certification) {
+            certifications.push(certification.textContent.trim());
         }
     });
 
-
-    // Profile data
+    // Create profile data
     const profileData = {
-
+        user_id: "user_001",
         name: name,
-
         skills: skills,
-
         projects: projects,
-
         certifications: certifications
     };
 
+    console.log("Sending profile:", profileData);
 
-    // For now, display the data in console.
-    // Later this will be sent to the Flask backend.
-    console.log("Profile Data:", profileData);
+    // Send data to Flask backend
+    try {
+
+        const response = await fetch(
+            "http://127.0.0.1:5000/api/profile",
+            {
+                method: "POST",
+
+                headers: {
+                    "Content-Type": "application/json"
+                },
+
+                body: JSON.stringify(profileData)
+            }
+        );
+
+        const result = await response.json();
+
+        console.log("Backend response:", result);
+
+        if (response.ok) {
+
+            window.location.href = "career.html";
+
+        } else {
+
+            alert("Failed to save profile.");
+
+        }
+
+    } catch (error) {
+
+        console.error("Error:", error);
+
+        alert(
+            "Could not connect to the backend. Make sure Flask is running."
+        );
+    }
 }
